@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kanban Board</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>        
+        <h1>Pomodoro</h1>
+    </header>
+    <main>
+        <div class="timer-container">
+            <div id="timer">00:00</div>
+            <select id="timer-select" > 
+                <option value="1">25:00</option>
+                <option value="2">15:00</option>
+                <option value="3">5:00</option>
+            </select>
+            <button id="start-timer" onclick="putoTimer()"></button>
+        </div>
+        <section class="column" id="crear">
+            <h2>Por Hacer</h2>         
+        </section>
+        <section class="column" value="Pendiente">
+            <h2>En Progreso</h2>           
+        </section>
+        <section class="column" value="Hecho">
+            <h2>Hecho</h2>           
+        </section>        
+    </main>
+    <button id="add-task" class="floating-button">+</button>
+    <div id="task-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <form id="task-form">
+                <label for="task-name">Tarea</label>
+                <input type="text" id="task-name" placeholder="Nombre de la tarea" required>
+                
+                <label for="task-description">Descripción</label>
+                <textarea id="task-description" placeholder="Descripción de la tarea" required></textarea>
+                
+                <label for="task-category">Categoría</label>
+                <select id="task-category">
+                    <option value="diseño">Diseño</option>
+                    <option value="front-end">Front-end</option>
+                    <option value="back-end">Back-end</option>
+                </select>
+                
+                <button type="submit">Crear Tarea</button>
+            </form>
+        </div>
+    </div>
+    
+    <script src="main.js"></script>
+</body>
+</html>

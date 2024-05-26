@@ -1,0 +1,262 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&display=swap');
+
+body {
+    font-family: 'Outfit', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+header {
+    background-color: #343a40;
+    color: white;
+    width: 100%;
+    padding: 10px 0;
+    text-align: center;
+}
+
+main {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    max-width: 1200px;
+    margin-top: 20px;
+}
+
+
+.column {
+    background-color: #f8f9fa;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    width: 30%;
+    padding: 10px;
+    margin: 0 10px;
+}
+
+.column h2 {
+    color: #343a40;
+    text-align: center;
+}
+
+
+.card {
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    margin: 10px 0;
+    padding-top: 5px;
+    
+    text-align: center;
+}
+
+#algo{
+    font-size: 30px;
+    padding-bottom: 10px;
+}
+
+#descripcion{
+    padding-bottom: 10px;
+}
+
+.card.done {
+    background: #B3EE73;    
+    
+}
+
+.card.toDo {
+    background: #FFFF96  
+        
+}
+
+
+p {
+    user-select: none;
+}
+
+.card p {
+    margin: 0;
+    cursor: grab;
+}
+
+.card.dragging {
+    opacity: 0.5;
+    cursor: grabbing;
+}
+
+.timer-container {
+    position: fixed;
+    bottom: 20px;
+    left: 43%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+#timer-select
+{
+    position: fixed;
+    bottom: 47px;
+    left: 44%;
+    font-size: 2rem;
+}
+
+#timer {
+    position: fixed;
+    bottom: 47px;
+    left: 44.2%;
+    font-size: 2rem;
+}
+
+#start-timer
+{
+    position: fixed;
+    width: 80px;
+    height: 80px;
+    left: 50%;
+    bottom: 30px;
+    padding: 10px;
+    font-size: 24px;
+    border: none;
+    border-radius: 20%;
+    background-color: red;
+    background-image: url("images/crono.png");
+    background-size: contain;    
+    color: white;
+    cursor: pointer;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+
+}
+
+.floating-button {
+    position: fixed;
+    width: 85px;
+    height: 85px;
+    right: 13%;    
+    top: 13.5%;
+    padding: 10px;
+    font-size: 24px;
+    border: none;
+    border-radius: 20%;
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+#cerrar
+{
+    position: relative;  
+    font-size: 18px;
+    opacity: 30%;
+    right: -45%;
+    top: -95px;     
+    width: 45px;
+    height: 25px;
+    border: none;
+    border-radius: 20%;
+    background: none;    
+    cursor: pointer;
+}
+
+.desc
+{
+    position: relative;
+    text-align: center;    
+    opacity: 70%;
+}
+
+.floating-button2 {
+    position: fixed;
+    width: 50px;
+    height: 50px;
+    right: 20px;
+    bottom: 20px;
+    padding: 10px;
+    font-size: 24px;
+    border: none;
+    border-radius: 20%;
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+.floating-button:hover {
+    background-color: #0056b3;
+}
+
+.modal {
+    display: none; 
+    position: fixed; 
+    z-index: 2; 
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    overflow: auto; 
+    background-color: rgb(0, 0, 0); 
+    background-color: rgba(0, 0, 0, 0.4); 
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 10% auto; 
+    padding: 20px;
+    border: 1px solid #888;
+    width: 50%; 
+    border-radius: 5px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+}
+
+
+.close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
+#task-form {
+    display: flex;
+    flex-direction: column;
+}
+
+#task-form input[type="text"],
+#task-form textarea,
+#task-form select {
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+#task-form button[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#task-form button[type="submit"]:hover {
+    background-color: #45a049;
+}
+
+
